@@ -86,4 +86,801 @@ main{padding:36px 0 56px;}
 .btn{font:inherit;font-weight:500;cursor:pointer;border-radius:999px;padding:10px 20px;min-height:44px;border:1px solid var(--accent);background:var(--accent);color:#fff;display:inline-flex;align-items:center;gap:8px;text-decoration:none;}
 .btn:hover{background:var(--ink);border-color:var(--ink);color:#fff;}
 .btn-ghost{background:transparent;color:var(--accent);}
-.btn-ghost:hover{b
+.btn-ghost:hover{background:var(--tint);color:var(--ink);border-color:var(--accent);}
+.btn-small{padding:6px 14px;min-height:36px;font-size:.92rem;}
+.linkbtn{font:inherit;color:var(--accent);background:none;border:0;padding:0;cursor:pointer;text-decoration:underline;text-underline-offset:3px;}
+.linkbtn:hover{color:var(--ink);}
+ul.clean,ol.clean{margin:0;padding-left:1.2em;}
+ul.clean li,ol.clean li{margin:.25em 0;}
+
+.check{display:flex;gap:10px;align-items:flex-start;cursor:pointer;padding:6px 0;}
+.check input{width:20px;height:20px;margin-top:4px;accent-color:var(--accent);flex:none;}
+.checklist{list-style:none;margin:0;padding:0;}
+
+.note{border-left:3px solid var(--terra);padding:4px 0 4px 16px;margin:22px 0;}
+.note p:last-child{margin-bottom:0;}
+.callout{background:var(--tint);border-radius:var(--r);padding:20px 24px;}
+.callout p:last-child{margin-bottom:0;}
+
+/* Startveckan */
+.rhythm{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px;margin:0 0 8px;padding:0;list-style:none;}
+.rhythm li{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:16px 20px;}
+.rhythm strong{display:block;font-family:var(--serif);font-weight:400;font-size:1.3rem;}
+.days{display:grid;gap:18px;margin-top:8px;}
+.day-head{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;align-items:flex-end;margin-bottom:8px;}
+.day-name{color:var(--terra-text);font-weight:600;margin:0 0 2px;}
+.day-time{color:var(--muted);font-size:.95rem;}
+.flow{list-style:none;margin:16px 0 8px;padding:0;border-top:1px solid var(--line);}
+.flow>li{padding:14px 0;border-bottom:1px solid var(--line);display:grid;grid-template-columns:150px 1fr;gap:6px 18px;}
+.flow-label{font-weight:600;}
+.flow-label small{display:block;font-weight:400;color:var(--muted);font-size:.9rem;}
+.flow p{margin:0;}
+.flow select{font:inherit;width:100%;max-width:440px;padding:8px 12px;border:1px solid var(--line);border-radius:12px;background:var(--bg);color:var(--ink);min-height:44px;}
+.flow details{margin-top:8px;}
+summary{cursor:pointer;color:var(--accent);font-weight:500;}
+summary:hover{color:var(--ink);}
+.quote{font-family:var(--serif);font-size:1.2rem;}
+
+/* Övningar */
+.filters{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 18px;}
+.filter{font:inherit;cursor:pointer;border:1px solid var(--line);background:var(--surface);color:var(--ink);border-radius:999px;padding:7px 16px;min-height:40px;}
+.filter[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:#fff;}
+.ex-list{display:grid;gap:12px;}
+.ex{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);}
+.ex>summary{list-style:none;padding:18px 24px;display:flex;justify-content:space-between;gap:12px;align-items:center;color:var(--ink);flex-wrap:wrap;}
+.ex>summary::-webkit-details-marker{display:none;}
+.ex>summary .ex-name{font-family:var(--serif);font-size:1.35rem;font-weight:400;}
+.ex>summary .ex-meta{display:flex;gap:8px;align-items:center;color:var(--muted);font-size:.92rem;font-weight:400;}
+.ex[open]>summary{border-bottom:1px solid var(--line);}
+.ex-body{padding:18px 24px 22px;}
+.ex-body h4{font-family:var(--sans);font-size:.95rem;font-weight:600;margin:14px 0 4px;}
+.ex-body h4:first-child{margin-top:0;}
+.tip{background:var(--bg);border-radius:14px;padding:12px 16px;margin-top:14px;}
+
+/* Årshjul */
+.year{display:grid;grid-template-columns:minmax(260px,360px) 1fr;gap:32px;align-items:start;}
+.wheel-wrap{position:sticky;top:84px;}
+.wheel{width:100%;height:auto;display:block;}
+.seg{cursor:pointer;}
+.seg path{stroke:#f5f3ec;stroke-width:3;}
+.seg:focus{outline:none;}
+.seg:focus-visible path{stroke:#2f6b5a;stroke-width:4;}
+.wheel-legend{display:flex;gap:16px;flex-wrap:wrap;font-size:.88rem;color:var(--muted);margin-top:10px;}
+.wheel-legend i{display:inline-block;width:12px;height:12px;border-radius:50%;margin-right:6px;vertical-align:-1px;border:1px solid var(--line);}
+.months{list-style:none;margin:0;padding:0;display:grid;gap:12px;}
+.month{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:18px 22px;}
+.month.now{border-color:var(--terra);border-width:2px;}
+.month-top{display:flex;justify-content:space-between;gap:10px;align-items:baseline;flex-wrap:wrap;}
+.month-name{color:var(--terra-text);font-weight:600;}
+.month h3{margin:2px 0 6px;font-size:1.35rem;}
+.month:focus{outline:3px solid var(--accent);outline-offset:3px;}
+.ex-links{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0 4px;}
+.passes{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px;}
+.passes li{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:16px 20px;}
+.passes strong{display:block;font-family:var(--serif);font-weight:400;font-size:1.25rem;}
+
+/* Mentorns roll */
+.two-col{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px;}
+.col-title{font-family:var(--serif);font-size:1.4rem;margin:0 0 8px;}
+
+/* Utskrifter */
+.sheets{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:14px;}
+.sheet-card h3{font-size:1.3rem;margin-bottom:6px;}
+.sheet-card .actions{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px;}
+.preview-box{margin-top:26px;}
+.preview-paper{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:28px;overflow-x:auto;}
+
+/* Utskriftsark (samma stil i förhandsvisning och utskrift) */
+.sheet{color:#111;font-family:var(--sans);font-size:12pt;line-height:1.45;}
+.sheet h1{font-family:var(--serif);font-size:22pt;font-weight:400;color:#111;margin:0 0 4pt;}
+.sheet h2{font-family:var(--serif);font-size:15pt;font-weight:400;color:#111;margin:14pt 0 4pt;}
+.sheet .sub{color:#333;margin:0 0 12pt;}
+.sheet table{border-collapse:collapse;width:100%;table-layout:fixed;}
+.sheet td{border:1px solid #444;vertical-align:top;padding:6pt;font-size:10.5pt;height:78pt;}
+.sheet.big td{font-size:13pt;height:110pt;}
+.sheet .line{border-bottom:1px solid #777;height:26pt;}
+.sheet .box{border:1px solid #777;border-radius:8pt;height:120pt;margin:4pt 0 10pt;}
+.sheet .cards{display:grid;grid-template-columns:1fr 1fr;gap:0;}
+.sheet .cards div{border:1px dashed #666;padding:14pt;min-height:110pt;display:flex;align-items:center;justify-content:center;text-align:center;font-size:12.5pt;}
+.sheet .cards.strengths div{min-height:70pt;font-family:var(--serif);font-size:17pt;}
+.sheet .cut{border-top:1px dashed #666;margin:16pt 0;}
+.sheet .q{margin:10pt 0 2pt;font-weight:600;}
+.sheet ul{margin:2pt 0 6pt;padding-left:16pt;}
+.sheet li{margin:2pt 0;}
+.sheet .day{break-inside:avoid;margin-bottom:8pt;}
+.sheet .faces{letter-spacing:10pt;font-size:16pt;}
+
+#print-area{display:none;}
+
+footer{border-top:1px solid var(--line);padding:30px 0 48px;}
+.store{display:flex;gap:14px;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;}
+.store p{max-width:70ch;}
+
+@media (max-width:760px){
+  .year{grid-template-columns:1fr;}
+  .wheel-wrap{position:static;max-width:340px;}
+  .flow>li{grid-template-columns:1fr;}
+  .card{padding:20px;}
+  .hero{padding-top:30px;}
+}
+@media (prefers-reduced-motion: reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important;}
+  .arc-line{stroke-dashoffset:0;}
+  .arc-dot{opacity:1;}
+}
+@media print{
+  @page{margin:14mm;}
+  body{background:#fff;}
+  .tabs,.stage,footer,.no-print,.hero-arc{display:none!important;}
+  body.printing-sheet .hero,body.printing-sheet main{display:none!important;}
+  body.printing-sheet #print-area{display:block;}
+  .sheet{break-after:page;}
+  .sheet:last-child{break-after:auto;}
+  .card,.month,.ex{break-inside:avoid;}
+}
+</style>
+<script defer src="https://cloud.umami.is/script.js" data-website-id="2e81b730-fb1d-4183-9323-de51c8949318" data-tag="startveckan" data-do-not-track="true"></script>
+</head>
+<body>
+<div class="norvay-bar"><a class="norvay-bar-back" href="https://norvayapp.se/#verktyg">← Alla verktyg</a><a class="norvay-bar-brand" href="https://norvayapp.se/" aria-label="Norvay startsida"><span class="norvay-bar-mark">N</span><span>NORVAY</span></a></div>
+
+<header class="hero">
+  <div class="wrap">
+    <svg class="hero-arc" viewBox="0 0 320 120" aria-hidden="true" focusable="false">
+      <path class="arc-line" pathLength="1" d="M20 112 A160 160 0 0 1 300 112" fill="none" stroke="#2f6b5a" stroke-width="1.6" stroke-linecap="round"/>
+      <circle class="arc-dot" cx="235" cy="48" r="9" fill="#c9785f"/>
+    </svg>
+    <p class="hero-for">Startveckan, för mentorer i förskoleklass till årskurs 9</p>
+    <h1>Ett tryggt mentorsår börjar <em>första</em> veckan</h1>
+    <p class="hero-lede">Planera startveckan dag för dag, hitta övningar som bygger relationer, följ ett årshjul för mentorstiden och skriv ut material. Du behöver aldrig skriva in något om dina elever.</p>
+  </div>
+</header>
+
+<section class="stage" aria-labelledby="stage-q">
+  <div class="wrap">
+    <p class="stage-q" id="stage-q">Vilket stadium är du mentor för?</p>
+    <div class="stage-btns" id="stage-btns">
+      <button type="button" class="stage-btn" data-stage="lag" aria-pressed="false">Lågstadiet <span>F–3</span></button>
+      <button type="button" class="stage-btn" data-stage="mel" aria-pressed="false">Mellanstadiet <span>4–6</span></button>
+      <button type="button" class="stage-btn" data-stage="hog" aria-pressed="false">Högstadiet <span>7–9</span></button>
+    </div>
+  </div>
+</section>
+
+<nav class="tabs" aria-label="Delar av verktyget">
+  <div class="tabs-inner" id="tabs">
+    <button type="button" class="tab" data-view="startveckan">Startveckan</button>
+    <button type="button" class="tab" data-view="ovningar">Övningar</button>
+    <button type="button" class="tab" data-view="arshjulet">Årshjulet</button>
+    <button type="button" class="tab" data-view="mentorn">Mentorns roll</button>
+    <button type="button" class="tab" data-view="samtalet">Samtalet</button>
+    <button type="button" class="tab" data-view="utskrifter">Utskrifter</button>
+  </div>
+</nav>
+
+<main id="main">
+  <div class="wrap">
+    <noscript><p class="card">Verktyget behöver JavaScript för att fungera. Slå på JavaScript i webbläsaren och ladda om sidan.</p></noscript>
+    <section class="view" id="v-startveckan" hidden></section>
+    <section class="view" id="v-ovningar" hidden></section>
+    <section class="view" id="v-arshjulet" hidden></section>
+    <section class="view" id="v-mentorn" hidden></section>
+    <section class="view" id="v-samtalet" hidden></section>
+    <section class="view" id="v-utskrifter" hidden></section>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="store">
+      <p class="small" id="store-text"></p>
+      <button type="button" class="btn btn-ghost btn-small" id="clear-btn">Rensa det sparade</button>
+    </div>
+    <p class="small muted">Startveckan är ett verktyg från Norvay. Innehållet är ett stöd för mentorer och ersätter inte skolans egna rutiner för elevhälsa, anmälningsplikt och dokumentation. Frågor och synpunkter: <a href="mailto:kontakt@norvayapp.se">kontakt@norvayapp.se</a></p>
+  </div>
+</footer>
+
+<div id="print-area" aria-hidden="true"></div>
+
+<script>
+(function(){
+'use strict';
+
+/* Adress till Ämnespasset */
+var AMNESPASSET_URL = 'https://amnespasset.norvayapp.se/';
+var STORE_KEY = 'norvay-startveckan-v1';
+
+var STAGES = {
+  lag:{namn:'Lågstadiet', ak:'F–3', kort:'lågstadiet'},
+  mel:{namn:'Mellanstadiet', ak:'4–6', kort:'mellanstadiet'},
+  hog:{namn:'Högstadiet', ak:'7–9', kort:'högstadiet'}
+};
+var ALL = ['lag','mel','hog'];
+var SYFTE = {lara:'Lära känna', tillit:'Tillit och samarbete', olika:'Olikheter', empati:'Omtanke och styrkor', gemenskap:'Gemenskap'};
+
+/* ---------- Övningar ---------- */
+var EX = [
+ {id:'femsaker', namn:'Fem saker om mig', syfte:'lara', tid:10, st:ALL, material:'En bild eller ett föremål som säger något om dig',
+  steg:['Mentorn tar med en bild eller ett föremål som säger något om hen.','Berätta fem saker: varför du blev lärare, något du gillar, något du inte är så bra på, något du ser fram emot med klassen och hur eleverna når dig.','Låt eleverna ställa frågor.'],
+  tips:{alla:'Det du väljer att berätta sätter tonen för året. Var personlig men inte privat. Läs mer under Mentorns roll.'}},
+ {id:'sanningbluff', namn:'Sanning eller bluff med mentorn', syfte:'lara', tid:10, st:ALL, material:'Inget',
+  steg:['Mentorn säger tre saker om sig själv. Två är sanna och en är bluff.','Eleverna gissar vilken som är bluffen och berättar varför de tror det.','Avslöja svaret och berätta lite mer om de sanna sakerna.'],
+  tips:{alla:'Välj saker som är personliga men inte privata, till exempel en hobby, en resa eller vad du ville bli som barn.'}},
+ {id:'namnleken', namn:'Namn och gest', syfte:'lara', tid:15, st:ALL, material:'Inget',
+  steg:['Alla står i en ring.','Den första säger sitt namn och gör en gest, till exempel en klapp eller en snurr.','Nästa person upprepar namnet och gesten före och lägger till sitt eget.','Fortsätt tills alla har varit med. Mentorn är också med.'],
+  tips:{lag:'Låt alla göra gesten tillsammans efter varje namn. Då behöver ingen komma ihåg allt själv.', mel:'Testa att para ihop namnet med något som börjar på samma bokstav: ”Jag heter … och jag simmar”.', hog:'Låt eleverna välja om de vill göra en gest eller bara säga namnet. Det sänker tröskeln för den som är blyg.'}},
+ {id:'vanbingo', namn:'Vän-bingo', syfte:'lara', tid:20, st:ALL, material:'Bingobricka (finns under Utskrifter)', sheet:'vanbingo',
+  steg:['Dela ut en bingobricka till varje elev.','Eleverna minglar och hittar en klasskamrat som stämmer in på varje ruta. Kamratens namn skrivs i rutan.','En person får bara stå i en ruta per bricka.','Den som får tre i rad ropar bingo, men leken fortsätter tills tiden är slut.','Avsluta med att några berättar något nytt de har lärt sig om någon.'],
+  tips:{lag:'Använd brickan med nio rutor och läs påståendena högt tillsammans först. Eleverna kan rita i stället för att skriva namn.', mel:'Be eleverna prata med minst en person de inte känner så väl.', hog:'Låt klassen hitta på en egen rad med påståenden.'}},
+ {id:'hitta', namn:'Hitta någon som …', syfte:'lara', tid:20, st:['mel','hog'], material:'Frågeblad (finns under Utskrifter)', sheet:'hitta',
+  steg:['Varje elev får ett blad med påståenden som börjar med ”Hitta någon som …”.','Eleverna går runt och frågar. Den som stämmer in skriver sitt namn.','Ställ en följdfråga till varje person, till exempel ”Hur då?” eller ”Berätta mer!”.','Samla klassen och fråga: vad överraskade er?'],
+  tips:{mel:'Sätt en regel: samma person får bara skriva en gång på varje blad.', hog:'Följdfrågan är det viktiga. Det är där samtalet börjar.'}},
+ {id:'tvasanningar', namn:'Två sanningar och en lögn', syfte:'lara', tid:20, st:['mel','hog'], material:'Skrivblad (finns under Utskrifter)', sheet:'tvasanningar',
+  steg:['Varje elev skriver tre påståenden om sig själv: två sanna och ett påhittat.','I par eller små grupper läser man upp sina påståenden.','De andra gissar vilket som är påhittat och förklarar varför.','Avsluta med frågan: lärde du dig något som förvånade dig?'],
+  tips:{mel:'Börja med att visa själv som mentor.', hog:'Påminn om att var och en väljer hur personlig hen vill vara.'}},
+ {id:'cirkel', namn:'Vem är jag?-cirkeln', syfte:'lara', tid:20, st:ALL, material:'En boll eller ett mjukt föremål att skicka runt',
+  steg:['Sitt i en ring och skicka runt en pratboll.','Den som håller bollen säger sitt namn, något hen gillar och något hen är bra på.','Den som inte vill säga något får skicka vidare och får en ny chans senare.','Mentorn är med i rundan.'],
+  tips:{lag:'Ge en mening att fylla i: ”Jag heter … och jag gillar …”.', alla:'Att få skicka vidare är viktigt. Ingen ska känna sig tvingad att prata inför klassen.'}},
+ {id:'lyssna', namn:'Lyssna utan att avbryta', syfte:'tillit', tid:20, st:ALL, material:'Inget',
+  steg:['Eleverna arbetar i par.','Den ena berättar i två minuter om något hen tycker om. Den andra lyssnar utan att avbryta.','Lyssnaren berättar kort vad hen hörde.','Byt roller.','Prata i helklass: hur kändes det att bli lyssnad på? Hur visar man att man lyssnar?'],
+  tips:{lag:'En minut räcker. Visa först hur man lyssnar med blicken och kroppen.', mel:'Skriv upp på tavlan vad eleverna säger om hur man visar att man lyssnar.', hog:'Lyft att aktivt lyssnande också är en del av att lösa konflikter.'}},
+ {id:'historia', namn:'Bygg en historia tillsammans', syfte:'tillit', tid:15, st:ALL, material:'Gärna en bild att börja från',
+  steg:['Mentorn börjar en berättelse med en mening.','Nästa person fortsätter med en mening, och så vidare runt hela klassen.','Den sista avslutar historien.','Prata om: hur kändes det att bygga något tillsammans?'],
+  tips:{lag:'Börja med ”Det var en gång …” och använd en bild som stöd.', alla:'Den som inte kommer på något kan säga ”och sedan …” och skicka vidare.'}},
+ {id:'torn', namn:'Bygg ett torn', syfte:'tillit', tid:25, st:ALL, material:'Papper och tejp, eller spaghetti och marshmallows',
+  steg:['Dela in klassen i grupper om 3–5.','Varje grupp bygger ett så högt torn som möjligt av samma material på tio minuter.','Prata efteråt: vem gjorde vad? Hur bestämde ni? Vad gjorde ni bra tillsammans?'],
+  tips:{lag:'Använd klossar eller lego och låt grupperna vara små.', hog:'Lägg till en regel: ingen får prata de första tre minuterna.'}},
+ {id:'diagram', namn:'Mänskligt diagram', syfte:'olika', tid:20, st:ALL, material:'Plats att röra sig på',
+  steg:['Gör plats i rummet och visa var svaren hör hemma, till exempel i olika hörn eller längs en linje på golvet.','Ställ frågor där eleverna ställer sig efter sitt svar: ”Gillar du lugn eller ljud?”, ”Vad gör du helst på rasten?”, ”Morgonpigg eller kvällspigg?”.','Låt några berätta varför de står där de står.','Avsluta: vad såg vi? Vi är lika på vissa sätt och olika på andra.'],
+  tips:{alla:'Välj frågor där inget svar kan bli pinsamt. Undvik frågor om familj, pengar, kropp och utseende.'}},
+ {id:'likheter', namn:'Tre likheter och en olikhet', syfte:'olika', tid:15, st:ALL, material:'Inget',
+  steg:['Eleverna arbetar i par med någon de inte känner så väl.','Paret hittar tre saker de har gemensamt och en sak där de är olika.','Några par berättar för klassen.'],
+  tips:{lag:'Ge exempel att välja bland: favoritfärg, mat, djur och lekar.'}},
+ {id:'snallt', namn:'Säg något snällt till tre personer', syfte:'empati', tid:5, st:ALL, material:'Inget',
+  steg:['Ge uppdraget i början av dagen: säg något snällt till tre olika personer före dagens slut.','Följ upp i reflektionen: hur kändes det att ge och att få?'],
+  tips:{hog:'Prata om skillnaden mellan en ärlig komplimang och en som bara är artig.', alla:'Mentorn gör uppdraget också.'}},
+ {id:'styrkebingo', namn:'Styrkebingo', syfte:'empati', tid:20, st:['mel','hog'], material:'Bingobricka med styrkor (finns under Utskrifter)', sheet:'styrkebingo',
+  steg:['Dela ut brickan med styrkor, till exempel ”är bra på att lyssna” och ”är tålmodig”.','Eleverna hittar en klasskamrat som passar varje styrka och skriver namnet.','Efteråt: vilken styrka blev du gladast över att få? Var det något som överraskade dig?'],
+  tips:{alla:'Håll koll på att alla får stå i minst en ruta. Hjälp till själv om någon blir utan.'}},
+ {id:'styrkekedja', namn:'Styrkekedjan', syfte:'empati', tid:25, st:ALL, material:'Styrkekort (finns under Utskrifter)', sheet:'styrkekort',
+  steg:['Varje elev väljer ett kort med en styrka som hen tycker passar sig själv.','Eleverna letar upp någon vars styrka kompletterar deras egen och länkar armarna.','Fortsätt tills hela klassen är en kedja.','Prata om: varför behöver en klass många olika styrkor?'],
+  tips:{lag:'Använd få och enkla styrkor och läs dem högt.', hog:'Låt eleverna motivera varför deras styrkor passar ihop.'}},
+ {id:'empatikort', namn:'Empatikort', syfte:'empati', tid:20, st:ALL, material:'Empatikort (finns under Utskrifter)', sheet:'empatikort',
+  steg:['Dela in klassen i små grupper och ge varje grupp några kort.','Gruppen läser ett kort i taget och pratar om: vad tänker du? Vad gör du?','Samla klassen och låt varje grupp berätta om ett kort.'],
+  tips:{lag:'Ta ett kort i taget i helklass och låt eleverna visa med rollspel.', mel:'Låt grupperna spela upp en bra lösning.', hog:'Låt grupperna skriva egna kort om situationer som kan hända i deras vardag, även på nätet.'}},
+ {id:'kontrakt', namn:'Hur vill vi ha det i vår klass?', syfte:'gemenskap', tid:30, st:ALL, material:'Klasskontrakt (finns under Utskrifter)', sheet:'kontrakt',
+  steg:['Fråga: vad behöver vi för att alla ska må bra och kunna lära sig?','Eleverna skriver förslag i små grupper.','Samla förslagen och slå ihop dem till några få punkter som alla förstår.','Skriv dem på klassens kontrakt och sätt upp det.','Återkom till kontraktet under året, inte bara första veckan.'],
+  tips:{lag:'Högst fem punkter, gärna med bilder.', hog:'Lägg till: vad gör vi om någon inte följer det vi har kommit överens om?'}},
+ {id:'trad', namn:'Relationsträdet', syfte:'gemenskap', tid:25, st:ALL, material:'Stort papper, löv i papper, pennor',
+  steg:['Rita ett stort träd på papper eller tavla.','Varje elev får ett löv och skriver sitt namn och något hen vill bidra med till klassen, till exempel glädje, hjälp eller idéer.','Sätt upp löven på trädet.','Prata om att alla är viktiga delar av samma träd.'],
+  tips:{lag:'Eleverna kan rita i stället för att skriva.'}},
+ {id:'tackvagg', namn:'Klassens tackvägg', syfte:'gemenskap', tid:15, st:ALL, material:'Stort papper och lappar',
+  steg:['Sätt upp ett stort papper på väggen.','Eleverna skriver positiva saker till varandra på lappar, till exempel ”Tack för att du hjälpte mig”.','Mentorn skriver också.','Låt väggen sitta kvar och fyllas på under terminen.'],
+  tips:{alla:'Håll koll så att alla elever får minst en lapp. Skriv själv till dem som saknar.'}},
+ {id:'tackfest', namn:'Tackfesten', syfte:'gemenskap', tid:30, st:ALL, material:'Lappar, gärna musik',
+  steg:['Eleverna skriver tacklappar till klasskamrater.','Gör ett quiz om veckan, en lek eller en dans.','Mentorn tackar klassen och säger något konkret som gick bra under veckan.'],
+  tips:{alla:'Det viktiga är att alla får något. Se till att ingen blir utan tacklapp.'}},
+ {id:'terminsmal', namn:'Två mål för terminen', syfte:'gemenskap', tid:15, st:ALL, material:'Papper eller reflektionsbladet',
+  steg:['Varje elev skriver ett socialt mål, till exempel ”Jag vill vara en bättre kompis”.','Och ett lärmål, till exempel ”Jag vill bli bättre på engelska”.','Eleverna behåller sina mål. Mentorn kan återkomma till dem i samtal under terminen.'],
+  tips:{lag:'Ett mål räcker, gärna ritat.'}}
+];
+function ex(id){ for(var i=0;i<EX.length;i++){ if(EX[i].id===id) return EX[i]; } return null; }
+function exFor(st){ return EX.filter(function(e){ return e.st.indexOf(st)>-1; }); }
+function tipFor(e, st){ return (e.tips && (e.tips[st] || e.tips.alla)) || ''; }
+
+/* ---------- Startveckan ---------- */
+var DAYS = [
+ {key:'man', dag:'Måndag', tema:'Vi lär känna varandra', syfte:'Bryta isen och väcka nyfikenhet, både mellan eleverna och mellan eleverna och mentorn.',
+  inn:{alla:'Vad ser du fram emot den här veckan?', lag:'Visa med tummen: hur känns det att vara i skolan igen?'}, ref:'Vad lärde du dig om någon annan i dag?', def:['femsaker','vanbingo']},
+ {key:'tis', dag:'Tisdag', tema:'Vi bygger tillit', syfte:'Skapa trygghet och träna på att lyssna på varandra.',
+  inn:{alla:'Hur mår du i dag på en skala 1–5, och varför?', lag:'Visa med fingrarna, 1–5: hur mår du i dag?'}, ref:'Hur kändes det att bli lyssnad på?', def:['lyssna','historia']},
+ {key:'ons', dag:'Onsdag', tema:'Vi är olika och det är bra', syfte:'Synliggöra olikheter som en tillgång för klassen.',
+  inn:{alla:'Vad är något som gör dig till just dig?', lag:'Vad tycker du mest om att göra?'}, ref:'Vad lärde du dig om någon som är olik dig?', def:['diagram','snallt']},
+ {key:'tor', dag:'Torsdag', tema:'Vi hjälper varandra att må bra', syfte:'Väcka empati och omtanke och bestämma tillsammans hur klassen vill ha det.',
+  inn:{alla:'När kände du dig gladast den här veckan?'}, ref:'Hur kan du bidra till att andra mår bra i klassen?', def:['styrkekedja','kontrakt']},
+ {key:'fre', dag:'Fredag', tema:'Vi firar vår gemenskap', syfte:'Avsluta veckan med glädje och blicka framåt mot terminen.',
+  inn:{alla:'Vad tar du med dig från den här veckan?'}, ref:'Vad är du mest stolt över den här veckan?', def:['tackfest','terminsmal']}
+];
+var BEFORE = [
+ 'Läs igenom veckan och välj övningar som passar din klass.',
+ 'Skriv ut det material du behöver under Utskrifter.',
+ 'Planera hur du presenterar dig själv: personlig men inte privat.',
+ 'Berätta för vårdnadshavare vad veckan går ut på.',
+ 'Prata med kollegor som har klassen, så att ni drar åt samma håll.',
+ 'Planera in korta enskilda samtal med varje elev under terminens första veckor.'
+];
+function frameMin(st){ return st==='lag' ? 10 : 15; }
+
+/* ---------- Årshjulet ---------- */
+var MONTHS = ['Aug–sep','Okt','Nov','Dec','Jan','Feb','Mar','Apr','Maj','Jun'];
+var MONTHS_LONG = ['Augusti–september','Oktober','November','December','Januari','Februari','Mars','April','Maj','Juni'];
+var YEAR = {
+ lag:[
+  {tema:'Trygg start', ide:'Startveckan, namn, rutiner och var man är på rasten.', ex:['vanbingo','cirkel']},
+  {tema:'Hur vill vi ha det i vår klass?', ide:'Gör klasskontraktet levande med bilder och återkom till det varje vecka.', ex:['kontrakt']},
+  {tema:'Vänskap och att leka tillsammans', ide:'Hur gör man när någon vill vara med? Öva på att fråga och på att säga ja.', ex:['empatikort','likheter']},
+  {tema:'Att hjälpa och att tacka', ide:'Tackvägg och små uppdrag: hjälp någon, säg något snällt.', ex:['tackvagg','snallt']},
+  {tema:'Ny termin, ny start', ide:'Påminn om kontraktet och sätt ett mål för våren.', ex:['kontrakt','terminsmal']},
+  {tema:'Känslor', ide:'Sätt ord på glad, ledsen, arg och rädd. Hur märker man hur någon annan känner sig?', ex:['empatikort']},
+  {tema:'Säga stopp och säga förlåt', ide:'Öva på att säga stopp med ord och kropp, och på att reda ut en konflikt.', ex:['lyssna']},
+  {tema:'Mina styrkor', ide:'Vad är jag bra på? Vad är mina kompisar bra på?', ex:['styrkekedja']},
+  {tema:'Samarbete', ide:'Samarbetslekar, gärna utomhus.', ex:['torn']},
+  {tema:'Avslut och stolthet', ide:'Vad har vi lärt oss? Vad är vi stolta över?', ex:['tackfest']}
+ ],
+ mel:[
+  {tema:'Trygg start', ide:'Startveckan och klassens rutiner.', ex:['vanbingo','hitta']},
+  {tema:'Kommunikation', ide:'Aktivt lyssnande och hur man säger saker så att de blir förstådda.', ex:['lyssna','historia']},
+  {tema:'Inkludering på rasten', ide:'Vem är med? Hur bjuder man in? Gör en karta över rasterna tillsammans.', ex:['empatikort','likheter']},
+  {tema:'Nätvett', ide:'Chatt, gruppchattar och spel. Vad gör man om något händer på nätet?', ex:['empatikort']},
+  {tema:'Ny termin', ide:'Se över klasskontraktet och sätt mål för våren.', ex:['kontrakt','terminsmal']},
+  {tema:'Känslor och empati', ide:'Känslokort och rollspel om att förstå hur andra har det.', ex:['empatikort']},
+  {tema:'Konflikter', ide:'Hur uppstår konflikter och hur löser vi dem? Öva på att säga förlåt.', ex:['lyssna']},
+  {tema:'Normer och grupptryck', ide:'Att våga säga nej och stå upp för sig själv och andra.', ex:['diagram']},
+  {tema:'Styrkor och studieteknik', ide:'Vad är jag bra på? Hur planerar jag mitt skolarbete?', ex:['styrkebingo']},
+  {tema:'Avslut', ide:'Vad har vi gjort bra tillsammans? Vad tar vi med oss?', ex:['tackfest']}
+ ],
+ hog:[
+  {tema:'Trygg start', ide:'Startveckan, klassens regler och vad en bra klasskamrat är. Prata om varför vi läser olika ämnen.', ex:['vanbingo','tvasanningar'], amnes:true},
+  {tema:'Roller i gruppen', ide:'Hur påverkar vi varandra? Vilka roller tar vi, och vilka får vi?', ex:['torn']},
+  {tema:'Nätetik och sociala medier', ide:'Hur beter man sig på nätet, och vad gör man om något händer?', ex:['empatikort']},
+  {tema:'Stress och press', ide:'Krav från skolan och från sociala medier. Strategier för att hantera stress.', ex:['lyssna']},
+  {tema:'Ny termin, nya mål', ide:'Halvårsreflektion och mål för våren.', ex:['terminsmal','kontrakt']},
+  {tema:'Respekt och gränser', ide:'Personliga gränser, samtycke i vardagen och hur man säger stopp.', ex:['empatikort']},
+  {tema:'Studieteknik och motivation', ide:'Planering inför prov, läxstrategier och vad som driver mig.', ex:['styrkebingo'], amnes:true},
+  {tema:'Psykisk hälsa', ide:'Känslor, när man mår dåligt och vem man kan prata med på skolan.', ex:['lyssna']},
+  {tema:'Framtid och val', ide:'Oro och förväntningar inför nästa läsår eller gymnasiet.', ex:['diagram']},
+  {tema:'Avslut och stolthet', ide:'Hur lämnar vi läsåret på ett bra sätt? Visa uppskattning för varandra.', ex:['tackfest']}
+ ]
+};
+var FOCUS = {
+ lag:[['Förskoleklass och åk 1','Trygghet, rutiner och att leka tillsammans'],['Åk 2','Vänskap och att förstå känslor'],['Åk 3','Ansvar för sig själv och för andra']],
+ mel:[['Åk 4','Ny i mellanstadiet: trygghet och tillhörighet'],['Åk 5','Kommunikation, nätvett och vänskap'],['Åk 6','Självbild, ansvar och att förbereda högstadiet']],
+ hog:[['Åk 7','Trygghet och tillhörighet'],['Åk 8','Självbild och ansvar'],['Åk 9','Framtid och självständighet']]
+};
+var PASS = {
+ lag:[['Samling','5 min','Hur mår vi? Vad händer i dag?'],['Tema','15–20 min','En lek, en saga eller ett samtal.'],['Avslut','5 min','En sak vi tar med oss.']],
+ mel:[['Incheckning','10 min','Hur mår klassen? Kort information.'],['Tema','20 min','Övning eller samtal kring månadens tema.'],['Avslut','10 min','Reflektion och vad vi tar med oss.']],
+ hog:[['Check-in','10 min','Hur mår klassen? Viktig information.'],['Tema','25 min','Övning, samtal eller skrivuppgift.'],['Avslut','10 min','Reflektion och planering framåt.']]
+};
+function monthIndex(d){ var m=d.getMonth(); if(m===7||m===8) return 0; if(m>=9) return m-8; if(m<=5) return m+4; return -1; }
+
+/* ---------- Samtalet ---------- */
+var TALK_INTRO = {
+ lag:'Vi ska prata en stund så att jag lär känna dig bättre. Det finns inga rätt eller fel svar, och du bestämmer själv vad du vill berätta. Om jag blir orolig för dig kan jag behöva prata med andra vuxna som kan hjälpa till.',
+ mel:'Det här är ett samtal för att vi ska lära känna varandra. Det finns inga rätt eller fel svar, och du bestämmer själv vad du vill berätta. Om jag blir orolig för dig eller någon annan kan jag behöva ta hjälp av andra vuxna, till exempel elevhälsan.',
+ hog:'Det här är ett samtal för att vi ska lära känna varandra. Det finns inga rätt eller fel svar, och du bestämmer själv vad du vill berätta. Om jag blir orolig för dig eller någon annan kan jag behöva ta hjälp av andra vuxna, till exempel elevhälsan.'
+};
+var TALK = {
+ lag:[
+  ['Om dig',['Vad vill du att jag ska kalla dig?','Vad tycker du är roligast att göra?','Vad är du bra på?']],
+  ['Skolan',['Vad tycker du är roligt i skolan?','Är det något som är svårt?','Visa med handen, 1–5: hur trivs du i klassen?']],
+  ['Kompisar och trygghet',['Vem brukar du leka med?','Finns det någon vuxen i skolan du kan gå till om något är jobbigt?']],
+  ['Fritid',['Vad gör du helst när du inte är i skolan?']],
+  ['Hur vi håller kontakten',['Hur ska jag märka om du har det jobbigt?','Är det något du vill att jag hjälper dig med?']]
+ ],
+ mel:[
+  ['Om dig',['Vad vill du bli kallad?','Hur skulle du beskriva dig själv med tre ord?','Är det något du vill att jag som mentor ska veta om dig?']],
+  ['Skolan',['Vilka ämnen tycker du mest om, och varför?','Vad är svårt eller mindre roligt?','Hur trivs du i klassrummet just nu, 1–5?','Vad hjälper dig när du ska lära dig något nytt?']],
+  ['Styrkor',['Vad är du bra på, i eller utanför skolan?','Vad vill du bli bättre på?']],
+  ['Kompisar och trygghet',['Hur trivs du med klasskamraterna, 1–5?','Finns det någon eller några i skolan du känner dig trygg med?','Vem pratar du med om något känns jobbigt?']],
+  ['Fritid',['Vad gör du helst på fritiden?','Är du med i någon förening eller aktivitet?']],
+  ['Hur vi håller kontakten',['Hur vill du att vi håller kontakten under terminen?','Är det något särskilt du vill att jag hjälper dig med i år?']]
+ ],
+ hog:[
+  ['Om dig',['Vad vill du bli kallad?','Hur skulle du beskriva dig själv med tre ord?','Är det något du vill att jag som mentor ska veta om dig?']],
+  ['Skolan och lärandet',['Vilka ämnen tycker du mest om, och varför?','Vilka är svåra eller mindre roliga?','Hur trivs du i klassrummet just nu, 1–5?','Vad hjälper dig när du ska lära dig något nytt?','Finns det något vi vuxna kan göra för att det ska bli lättare för dig?']],
+  ['Styrkor och utmaningar',['Vad är du bra på, i eller utanför skolan?','Vad vill du bli bättre på?','När känner du dig mest nöjd med dig själv?','Är det något som brukar göra det svårt att fokusera?']],
+  ['Kompisar och trygghet',['Hur trivs du med klasskamraterna, 1–5?','Finns det någon eller några i skolan du känner dig trygg med?','Hur fungerar samarbetet i klassen, tycker du?','Vem pratar du med om något känns jobbigt?']],
+  ['Fritid',['Vad gör du helst på fritiden?','Är du med i någon förening eller aktivitet?','Har du något intresse som nästan ingen vet om?']],
+  ['Hur vi håller kontakten',['Hur vill du att vi håller kontakten under terminen?','Är det något särskilt du vill att jag hjälper dig med i år?']]
+ ]
+};
+var TALK_TIPS = [
+ 'Du behöver inte ställa alla frågor. Välj det som passar eleven och låt samtalet ta sin egen väg.',
+ 'Ett samtal är inte ett förhör. Eleven bestämmer vad hen vill berätta.',
+ 'Om eleven berättar något som gör dig orolig, ta det vidare till elevhälsan enligt skolans rutiner. Lova aldrig att hålla något hemligt.',
+ 'Anteckna bara det som behövs, och bara där skolan har bestämt att uppgifter om elever ska finnas. Inte i det här verktyget.'
+];
+
+/* ---------- Utskrifter ---------- */
+var BINGO = {
+ lag:['har ett husdjur','gillar att rita','har ett syskon','kan vissla','gillar glass','kan cykla','tycker om att sjunga','har samma favoritfärg som du','kan säga hej på två språk'],
+ mel:['har ett husdjur','har samma favoritfärg som du','tycker om att läsa','har ett syskon','har bott i en annan stad','kan säga hej på tre språk','kan vissla','tycker om matte','har en ovanlig hobby','gillar att rita','har samma favoriträtt som du','spelar ett instrument','har en favoritfilm','gillar att spela spel','har varit på en konsert']
+};
+BINGO.hog = BINGO.mel;
+var HITTA = ['kan vissla med två fingrar','kan säga hej på tre språk','tycker om lakrits','inte tycker om lakrits','har samma tröjfärg som du i dag','är född samma årstid som du','har läst en bok i sommar','kan ett korttrick','tycker om att laga mat','har ett favoritlag','har testat något nytt i sommar','kan rita ett djur på 30 sekunder'];
+var STRENGTH_BINGO = ['är bra på att lyssna','tycker om att hjälpa andra','har en bra fantasi','är modig','kan förklara saker bra','tycker om att rita','är omtänksam','är bra på att lösa problem','ger komplimanger','är tålmodig'];
+var STRENGTHS = {
+ lag:['Snäll','Modig','Rolig','Hjälpsam','Glad','Bra lyssnare','Nyfiken','Bra kompis'],
+ mel:['Bra lyssnare','Modig','Omtänksam','Påhittig','Tålmodig','Rolig','Hjälpsam','Noggrann','Bra på att förklara','Bra på att samarbeta','Lugn','Nyfiken','Ärlig','Positiv','Uthållig','Bra på att lösa problem']
+};
+STRENGTHS.hog = STRENGTHS.mel;
+var EMPATHY = {
+ lag:['En kompis är ledsen för att ingen vill leka. Vad gör du?','Någon ramlar på skolgården. Vad gör du?','Två kompisar vill leka olika lekar. Hur kan de lösa det?','Någon säger något elakt till en kompis. Vad kan du göra?','En ny elev står ensam på rasten. Vad kan du göra?','Du råkar förstöra något som en kompis har byggt. Vad säger du?','Någon spiller ut sin mjölk i matsalen. Vad säger du?','Du blir arg på en kompis. Vad kan du göra i stället för att skrika eller slåss?'],
+ mel:['Din kompis är ledsen över att inte bli vald till ett lag. Vad gör du?','Du hör någon viska taskiga saker om en annan elev. Vad tänker du? Vad gör du?','Du ser någon sitta ensam på rasten. Hur kan du hjälpa hen att känna sig välkommen?','Någon i en gruppchatt skickar en bild för att göra narr av en klasskamrat. Vad gör du?','Du och en kompis tycker olika. Hur kan ni lösa det på ett bra sätt?','En elev råkar spilla ut sin mat i matsalen. Vad säger du?','Någon vill inte att du leker med en viss person. Vad gör du?','Du har sagt något dumt till en kompis. Hur kan du göra det bra igen?'],
+ hog:['En klasskamrat blir utesluten ur en gruppchatt. Vad gör du?','Någon delar en bild på en annan elev utan att fråga. Vad tänker du? Vad gör du?','Din kompis verkar ha det tufft men säger att allt är bra. Hur kan du visa att du bryr dig?','Ni ska bilda grupper och samma elev blir över varje gång. Vad kan du göra?','Någon skämtar på ett sätt som du märker sårar en annan. Vad säger du?','Du och en kompis har olika åsikter om något viktigt. Hur kan ni prata om det?','En ny elev börjar i klassen. Hur kan klassen ta emot hen?','Du har gjort något som sårat någon. Hur ber du om ursäkt så att det känns ärligt?']
+};
+var REFLECT = [
+ ['Måndag','Vi lär känna varandra',['Vad ser du fram emot den här veckan?','Något nytt jag lärde mig om någon:']],
+ ['Tisdag','Vi bygger tillit',['Hur mår du i dag (1–5)? Varför?','Hur kändes det att bli lyssnad på?']],
+ ['Onsdag','Vi är olika och det är bra',['Vad gör dig till just dig?','Vad är bra med att vi är olika?']],
+ ['Torsdag','Vi hjälper varandra att må bra',['En styrka jag har:','Så kan jag hjälpa andra att må bra i klassen:']],
+ ['Fredag','Vi firar vår gemenskap',['Mitt sociala mål för terminen:','Mitt lärmål för terminen:','Det här är jag mest stolt över från veckan:']]
+];
+
+var SHEETS = [
+ {id:'veckoplan', namn:'Min veckoplan', besk:'Startveckan som du har planerat den, dag för dag.', st:ALL},
+ {id:'vanbingo', namn:'Vän-bingo', besk:'Bingobricka för att lära känna varandra.', st:ALL},
+ {id:'hitta', namn:'Hitta någon som …', besk:'Frågeblad för mingel med följdfrågor.', st:['mel','hog']},
+ {id:'tvasanningar', namn:'Två sanningar och en lögn', besk:'Skrivblad, två per sida.', st:['mel','hog']},
+ {id:'styrkebingo', namn:'Styrkebingo', besk:'Bingobricka med styrkor.', st:['mel','hog']},
+ {id:'styrkekort', namn:'Styrkekort', besk:'Kort att klippa ut till styrkekedjan.', st:ALL},
+ {id:'empatikort', namn:'Empatikort', besk:'Diskussionskort att klippa ut.', st:ALL},
+ {id:'kontrakt', namn:'Klasskontrakt', besk:'Hur vill vi ha det i vår klass?', st:ALL},
+ {id:'reflektion', namn:'Reflektionsblad', besk:'Elevens blad för hela startveckan.', st:ALL},
+ {id:'samtal', namn:'Lära-känna-samtalet', besk:'Samtalsstöd för mentorn.', st:ALL}
+];
+
+/* ---------- Lagring ---------- */
+var canStore = (function(){ try{ var k='__nv_test'; localStorage.setItem(k,'1'); localStorage.removeItem(k); return true; }catch(e){ return false; } })();
+function freshState(){ return {stage:'mel', plan:{}, done:{}, before:{}, wheel:{}}; }
+function load(){
+  if(!canStore) return freshState();
+  try{
+    var raw = localStorage.getItem(STORE_KEY);
+    if(!raw) return freshState();
+    var s = JSON.parse(raw), f = freshState();
+    if(!s || typeof s!=='object') return f;
+    f.stage = STAGES[s.stage] ? s.stage : 'mel';
+    ['plan','done','before','wheel'].forEach(function(k){ if(s[k] && typeof s[k]==='object') f[k]=s[k]; });
+    return f;
+  }catch(e){ return freshState(); }
+}
+function save(){ if(!canStore) return; try{ localStorage.setItem(STORE_KEY, JSON.stringify(state)); }catch(e){} }
+var state = load();
+var ui = {view:'startveckan', filter:'alla', sheet:'veckoplan'};
+
+function esc(s){ return String(s).replace(/[&<>"']/g,function(c){ return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]; }); }
+function $(id){ return document.getElementById(id); }
+
+function planFor(st, day){
+  var avail = exFor(st).map(function(e){ return e.id; });
+  var p = (state.plan[st] && state.plan[st][day.key]) || day.def;
+  return [0,1].map(function(i){ return avail.indexOf(p[i])>-1 ? p[i] : day.def[i]; });
+}
+function bucket(obj, st){ if(!obj[st]) obj[st]={}; return obj[st]; }
+
+/* ---------- Rendering ---------- */
+function exSteps(e, st){
+  var h = '<h4>Syfte</h4><p>'+esc(SYFTE[e.syfte])+'</p>';
+  h += '<h4>Material</h4><p>'+esc(e.material)+'</p>';
+  h += '<h4>Gör så här</h4><ol class="clean">'+e.steg.map(function(s){ return '<li>'+esc(s)+'</li>'; }).join('')+'</ol>';
+  var t = tipFor(e, st);
+  if(t) h += '<p class="tip"><strong>Tips för '+esc(STAGES[st].kort)+'</strong><br>'+esc(t)+'</p>';
+  if(e.sheet) h += '<p style="margin-top:12px"><button type="button" class="linkbtn" data-goto-sheet="'+e.sheet+'">Visa utskriften</button></p>';
+  return h;
+}
+
+function renderStart(){
+  var st = state.stage, fm = frameMin(st), done = bucket(state.done, st), before = bucket(state.before, st);
+  var h = '<div class="view-head"><h2 tabindex="-1">Fem dagar som lägger <em>grunden</em></h2>'+
+    '<p>Under startveckan lär eleverna känna varandra och sin mentor på ett nytt sätt. Varje dag har ett tema och samma rytm. Byt gärna ut aktiviteterna mot andra som passar din klass bättre.</p></div>';
+  h += '<ul class="rhythm" aria-label="Dagens rytm">'+
+    '<li><strong>Incheckning</strong><span class="muted">'+fm+' min. En fråga som alla får svara på.</span></li>'+
+    '<li><strong>Aktiviteter</strong><span class="muted">30–45 min. Elev med elev och elev med mentor.</span></li>'+
+    '<li><strong>Reflektion</strong><span class="muted">'+fm+' min. Vad tar vi med oss?</span></li></ul>';
+  if(st==='lag') h += '<p class="note">På lågstadiet fungerar kortare pass bäst. Dela gärna upp dagen i flera korta stunder och blanda med rörelse.</p>';
+
+  h += '<h3 class="section-title">Före veckan</h3><div class="card"><ul class="checklist">'+
+    BEFORE.map(function(b,i){ return '<li><label class="check"><input type="checkbox" data-before="'+i+'"'+(before[i]?' checked':'')+'><span>'+esc(b)+'</span></label></li>'; }).join('')+
+    '</ul></div>';
+
+  h += '<h3 class="section-title">Veckan dag för dag</h3><div class="days">';
+  var avail = exFor(st);
+  DAYS.forEach(function(d){
+    var p = planFor(st,d), e0 = ex(p[0]), e1 = ex(p[1]);
+    var total = fm*2 + e0.tid + e1.tid;
+    var inn = d.inn[st] || d.inn.alla;
+    h += '<article class="card" id="dag-'+d.key+'" aria-labelledby="h-'+d.key+'">'+
+      '<div class="day-head"><div><p class="day-name">'+d.dag+'</p><h3 id="h-'+d.key+'">'+esc(d.tema)+'</h3></div>'+
+      '<span class="day-time">Cirka '+total+' min</span></div>'+
+      '<p class="muted">'+esc(d.syfte)+'</p><ol class="flow">'+
+      '<li><span class="flow-label">Incheckning<small>'+fm+' min</small></span><p class="quote">”'+esc(inn)+'”</p></li>';
+    [e0,e1].forEach(function(e,i){
+      var sid='sel-'+d.key+'-'+i;
+      h += '<li><span class="flow-label"><label for="'+sid+'">Aktivitet '+(i+1)+'</label><small>'+e.tid+' min</small></span><div>'+
+        '<select id="'+sid+'" data-day="'+d.key+'" data-slot="'+i+'">'+
+        avail.map(function(a){ return '<option value="'+a.id+'"'+(a.id===e.id?' selected':'')+'>'+esc(a.namn)+' ('+a.tid+' min)</option>'; }).join('')+
+        '</select><details><summary>Så gör du</summary><div style="padding-top:8px">'+exSteps(e,st)+'</div></details></div></li>';
+    });
+    h += '<li><span class="flow-label">Reflektion<small>'+fm+' min</small></span><p class="quote">”'+esc(d.ref)+'”</p></li></ol>'+
+      '<label class="check"><input type="checkbox" data-done="'+d.key+'"'+(done[d.key]?' checked':'')+'><span>Dagen är genomförd</span></label></article>';
+  });
+  h += '</div>';
+  if(st==='hog'){
+    h += '<div class="callout" style="margin-top:22px"><p><strong>Varför läser vi alla ämnen?</strong> Under startveckan passar det bra att prata om varför eleverna läser olika ämnen och vad de har för nytta av dem. Det finns ett eget verktyg för det, Ämnespasset.</p><p><a href="'+AMNESPASSET_URL+'">Öppna Ämnespasset</a></p></div>';
+  }
+  h += '<p class="note">Efter veckan fortsätter arbetet i mentorstiden. Under <button type="button" class="linkbtn" data-goto-view="arshjulet">Årshjulet</button> finns ett förslag på teman för resten av läsåret.</p>';
+  $('v-startveckan').innerHTML = h;
+}
+
+function renderExercises(){
+  var st = state.stage, list = exFor(st);
+  var shown = ui.filter==='alla' ? list : list.filter(function(e){ return e.syfte===ui.filter; });
+  var h = '<div class="view-head"><h2 tabindex="-1">Övningar som bygger <em>relationer</em></h2>'+
+    '<p>'+list.length+' övningar passar '+esc(STAGES[st].kort)+'. Alla går att göra utan att någon behöver dela mer än hen vill.</p></div>';
+  h += '<div class="filters" role="group" aria-label="Visa övningar efter syfte">'+
+    '<button type="button" class="filter" data-filter="alla" aria-pressed="'+(ui.filter==='alla')+'">Alla</button>'+
+    Object.keys(SYFTE).map(function(k){ return '<button type="button" class="filter" data-filter="'+k+'" aria-pressed="'+(ui.filter===k)+'">'+SYFTE[k]+'</button>'; }).join('')+'</div>';
+  h += '<p class="visually-hidden" aria-live="polite">'+shown.length+' övningar visas</p><div class="ex-list">';
+  shown.forEach(function(e){
+    h += '<details class="ex" id="ex-'+e.id+'"><summary><span class="ex-name">'+esc(e.namn)+'</span><span class="ex-meta"><span class="pill">'+esc(SYFTE[e.syfte])+'</span>'+e.tid+' min</span></summary>'+
+      '<div class="ex-body">'+exSteps(e,st)+'</div></details>';
+  });
+  h += '</div>';
+  $('v-ovningar').innerHTML = h;
+}
+
+function wheelSVG(st){
+  var cx=160, cy=160, R=150, r=86, n=10, wd=bucket(state.wheel,st), now=monthIndex(new Date());
+  function pt(rad, deg){ var a=(deg-90)*Math.PI/180; return [ (cx+rad*Math.cos(a)).toFixed(2), (cy+rad*Math.sin(a)).toFixed(2) ]; }
+  var s = '<svg class="wheel" viewBox="0 0 320 320" role="group" aria-label="Årshjul för '+esc(STAGES[st].kort)+'">';
+  var doneCount = 0;
+  for(var i=0;i<n;i++){
+    var a0=i*36+1.2, a1=(i+1)*36-1.2, p1=pt(R,a0), p2=pt(R,a1), p3=pt(r,a1), p4=pt(r,a0);
+    var d='M'+p1+' A'+R+' '+R+' 0 0 1 '+p2+' L'+p3+' A'+r+' '+r+' 0 0 0 '+p4+' Z';
+    var isDone = !!wd[i]; if(isDone) doneCount++;
+    var fill = isDone ? '#d7e2d7' : '#ffffff';
+    var lp = pt((R+r)/2, (a0+a1)/2);
+    s += '<g class="seg" tabindex="0" role="button" data-seg="'+i+'" aria-label="'+MONTHS_LONG[i]+': '+esc(YEAR[st][i].tema)+(isDone?', genomfört':'')+(i===now?', denna månad':'')+'">'+
+      '<path d="'+d+'" fill="'+fill+'"/>'+
+      (i===now ? '<path d="'+d+'" fill="none" stroke="#c9785f" stroke-width="3" style="stroke:#c9785f"/>' : '')+
+      '<text x="'+lp[0]+'" y="'+lp[1]+'" text-anchor="middle" dominant-baseline="middle" font-family="DM Sans, system-ui, sans-serif" font-size="11.5" font-weight="500" fill="#123f37">'+MONTHS[i]+'</text></g>';
+  }
+  s += '<circle cx="160" cy="160" r="'+(r-8)+'" fill="#f5f3ec" stroke="rgba(18,63,55,0.14)"/>'+
+    '<text x="160" y="152" text-anchor="middle" font-family="Newsreader, Georgia, serif" font-size="21" fill="#123f37">'+STAGES[st].namn+'</text>'+
+    '<text x="160" y="178" text-anchor="middle" font-family="DM Sans, system-ui, sans-serif" font-size="13" fill="#4f6b63">'+doneCount+' av 10 genomförda</text></svg>';
+  return s;
+}
+
+function renderYear(){
+  var st = state.stage, wd = bucket(state.wheel, st), now = monthIndex(new Date());
+  var h = '<div class="view-head"><h2 tabindex="-1">Mentorskap hela <em>året</em></h2>'+
+    '<p>Startveckan är början. Relationerna växer i mentorstiden vecka för vecka. Här är ett förslag på teman för '+esc(STAGES[st].kort)+' som du kan följa eller anpassa.</p></div>';
+  h += '<h3 class="section-title" style="margin-top:0">Ett mentorspass</h3><ul class="passes">'+
+    PASS[st].map(function(p){ return '<li><strong>'+p[0]+'</strong><span class="pill">'+p[1]+'</span><p class="muted" style="margin:8px 0 0">'+esc(p[2])+'</p></li>'; }).join('')+'</ul>'+
+    '<p class="note">Samma start varje gång ger trygghet, särskilt i en orolig klass. Mentorstiden används till relationer, social träning, studieteknik och klassens frågor, inte bara till information.</p>';
+  h += '<h3 class="section-title">Fokus per årskurs</h3><div class="grid grid-3">'+
+    FOCUS[st].map(function(f){ return '<div class="card"><p class="day-name">'+esc(f[0])+'</p><p style="margin:0">'+esc(f[1])+'</p></div>'; }).join('')+'</div>';
+  h += '<h3 class="section-title">Årshjulet</h3><div class="year"><div class="wheel-wrap">'+wheelSVG(st)+
+    '<div class="wheel-legend"><span><i style="background:#d7e2d7"></i>Genomfört</span><span><i style="background:#fff;border:2px solid #c9785f"></i>Denna månad</span></div>'+
+    '<p class="small muted" style="margin-top:10px">Välj en månad i hjulet för att hoppa till den.</p></div><ol class="months">';
+  YEAR[st].forEach(function(m,i){
+    h += '<li class="month'+(i===now?' now':'')+'" id="manad-'+i+'" tabindex="-1"><div class="month-top"><span class="month-name">'+MONTHS_LONG[i]+(i===now?' (nu)':'')+'</span></div>'+
+      '<h3>'+esc(m.tema)+'</h3><p>'+esc(m.ide)+'</p>'+
+      '<div class="ex-links">'+m.ex.filter(function(id){ var e=ex(id); return e && e.st.indexOf(st)>-1; }).map(function(id){ return '<button type="button" class="btn btn-ghost btn-small" data-goto-ex="'+id+'">'+esc(ex(id).namn)+'</button>'; }).join('')+'</div>'+
+      (m.amnes ? '<p class="small">Passar ihop med <a href="'+AMNESPASSET_URL+'">Ämnespasset</a>, om varför vi läser olika ämnen.</p>' : '')+
+      '<label class="check"><input type="checkbox" data-wheel="'+i+'"'+(wd[i]?' checked':'')+'><span>Genomfört</span></label></li>';
+  });
+  h += '</ol></div>';
+  h += '<h3 class="section-title">Återkommande</h3><div class="two-col">'+
+    '<div class="card"><p class="col-title">Varje vecka</p><ul class="clean"><li>Ha koll på närvaron.</li><li>Känn av klassens klimat.</li><li>Prata enskilt med minst en elev.</li><li>Följ upp det du är orolig för.</li></ul></div>'+
+    '<div class="card"><p class="col-title">Varje termin</p><ul class="clean"><li>Enskilt samtal med varje elev, minst en gång.</li><li>Kontakt med vårdnadshavare, även när det går bra.</li><li>Stäm av kunskapsutvecklingen med ämneslärarna.</li><li>Stäm av med elevhälsan.</li></ul></div></div>';
+  $('v-arshjulet').innerHTML = h;
+}
+
+function renderMentor(){
+  var h = '<div class="view-head"><h2 tabindex="-1">Mentorn är den trygga <em>vuxna</em></h2>'+
+    '<p>Mentorn har ett helhetsansvar för elevens skolsituation. Det handlar om kunskaper, men lika mycket om hur eleven har det socialt och hur hen mår.</p></div>';
+  h += '<div class="grid grid-2">'+
+    '<div class="card"><h3>Bygga relationer</h3><ul class="clean"><li>Lära känna varje elev på riktigt.</li><li>Se elevernas styrkor och behov.</li><li>Vara en vuxen som eleven kan vända sig till.</li></ul></div>'+
+    '<div class="card"><h3>Följa elevens utveckling</h3><ul class="clean"><li>Kunskaper</li><li>Närvaro</li><li>Mående</li><li>Social situation</li></ul></div>'+
+    '<div class="card"><h3>Skapa en fungerande grupp</h3><ul class="clean"><li>Arbeta aktivt med klassens klimat.</li><li>Förebygga konflikter och kränkningar.</li><li>Stärka samarbete och respekt.</li></ul></div>'+
+    '<div class="card"><h3>Vara länk</h3><ul class="clean"><li>Mellan elev och lärare.</li><li>Mellan skola och vårdnadshavare.</li><li>Mellan elev och elevhälsa.</li></ul></div></div>';
+  h += '<h3 class="section-title">Personlig men inte privat</h3>'+
+    '<p style="max-width:68ch">Goda relationer är avgörande för lärande, trygghet och motivation. Men relationen är professionell. Att vara personlig betyder att visa sig som människa, med värme och engagemang, i sin yrkesroll. Att vara privat betyder att dela sådant som hör till ens eget liv på ett sätt som går utanför rollen.</p>'+
+    '<div class="two-col"><div class="card"><p class="col-title">Personlig</p><ul class="clean">'+
+    '<li>Berätta varför du blev lärare eller vad du gillar med ditt ämne.</li><li>Visa intresse för elevens vardag: ”Hur gick matchen i helgen?”</li><li>Ha humor och bjud på dig själv.</li><li>Dela lagom mycket om dina intressen: ”Jag älskar att vandra på sommaren.”</li><li>Ge uppmuntran: ”Jag såg att du verkligen kämpade i dag.”</li></ul></div>'+
+    '<div class="card"><p class="col-title">Privat, och bör undvikas</p><ul class="clean">'+
+    '<li>Berätta om relationsproblem, ekonomiska bekymmer eller egen psykisk ohälsa.</li><li>Prata negativt om kollegor, andra elever eller skolledningen.</li><li>Dela detaljer från privata sociala medier.</li><li>Söka tröst eller stöd hos elever i privata frågor.</li><li>Prata om alkohol, fester eller andra vuxenämnen.</li></ul></div></div>'+
+    '<p class="note">Varför? Elever ska inte behöva ta ansvar för vuxnas känslor. Det privata kan skapa lojalitetskonflikter och osäkerhet hos eleverna, och det gör det svårare att vara den tydliga vuxna som klassen behöver.</p>';
+  h += '<h3 class="section-title">Relationer eller undervisning?</h3><div class="callout"><p>Både och. Elever som känner att läraren bryr sig orkar och vågar mer. Undervisning med struktur, tydlighet och engagerande uppgifter visar att du tror på elevernas förmåga, och det bygger i sin tur förtroende. Effekten går åt båda hållen. Relationen är särskilt viktig för elever som har det tufft hemma eller i skolan.</p></div>';
+  h += '<h3 class="section-title">Små saker som gör skillnad</h3><div class="grid grid-3">'+
+    '<div class="card"><h3>Se varje elev</h3><p style="margin:0">Hälsa, använd namnet och kom ihåg saker eleven har berättat.</p></div>'+
+    '<div class="card"><h3>Se de tysta</h3><p style="margin:0">Var extra uppmärksam på elever som är tysta, saknar en tydlig plats i gruppen eller sällan ber om hjälp.</p></div>'+
+    '<div class="card"><h3>Lyft det positiva</h3><p style="margin:0">Uppmärksamma bra beteenden och samarbete. Visa klassen hur långt den har kommit.</p></div></div>';
+  h += '<h3 class="section-title">Signaler att ta på allvar</h3><div class="grid grid-3">'+
+    '<div class="card"><p class="col-title">I skolarbetet</p><ul class="clean"><li>Ökande frånvaro</li><li>Sena ankomster</li><li>Missade uppgifter</li><li>Sjunkande resultat</li></ul></div>'+
+    '<div class="card"><p class="col-title">Socialt</p><ul class="clean"><li>Utanförskap</li><li>Konflikter</li><li>Ensamhet</li></ul></div>'+
+    '<div class="card"><p class="col-title">Känslomässigt</p><ul class="clean"><li>Nedstämdhet</li><li>Irritation</li><li>Låg motivation</li><li>Uppgivenhet</li></ul></div></div>'+
+    '<div class="callout" style="margin-top:16px"><p><strong>Du ska inte bära allt själv.</strong> Ta ett kort enskilt samtal, visa omtanke och ställ öppna frågor, till exempel ”Jag har märkt att du verkar ha det tufft just nu.” Vid oro: kontakta elevhälsan, samverka med ämneslärarna och ha en dialog med hemmet enligt skolans rutiner. Misstänker du att ett barn far illa gäller anmälningsplikten.</p></div>';
+  h += '<h3 class="section-title">När klassen är orolig</h3><div class="grid grid-2">'+
+    '<div class="card"><h3>Stärk gruppen först</h3><p style="margin:0">Samarbetsövningar, gemensamma mål och positiva normer går före allt annat.</p></div>'+
+    '<div class="card"><h3>Tydliga ramar</h3><p style="margin:0">Samma start varje pass, få och klara regler och uppföljning. Förutsägbarhet skapar lugn.</p></div>'+
+    '<div class="card"><h3>Skapa vi-känsla</h3><p style="margin:0">Klasskontrakt, gemensamma utmaningar och samtal om hur klassen vill ha det.</p></div>'+
+    '<div class="card"><h3>Be om stöd</h3><p style="margin:0">Ta upp det på mentorsmöten och med elevhälsan i tid, innan det har gått för långt.</p></div></div>';
+  h += '<h3 class="section-title">För skolledningen</h3><div class="card"><p>Mentorskapet blir likvärdigt när alla klasser arbetar på samma sätt och mentorerna får förutsättningar. Det mentorer behöver från skolan:</p><ul class="clean"><li>Schemalagd mentorstid som används till relationer och inte bara till administration.</li><li>Regelbundna mentorsmöten där man kan lyfta oro och dela erfarenheter.</li><li>Handledning och tydligt stöd från elevhälsan.</li><li>En gemensam startvecka och ett gemensamt årshjul, så att eleverna möter samma arbetssätt oavsett klass.</li></ul></div>';
+  $('v-mentorn').innerHTML = h;
+}
+
+function renderTalk(){
+  var st = state.stage;
+  var h = '<div class="view-head"><h2 tabindex="-1">Lära-känna-<em>samtalet</em></h2>'+
+    '<p>Ett kort enskilt samtal med varje elev tidigt på terminen är en av de bästa investeringarna en mentor kan göra. Här är frågor att välja bland för '+esc(STAGES[st].kort)+'.</p></div>';
+  h += '<div class="callout"><p><strong>Så kan du börja</strong></p><p class="quote" style="margin:0">”'+esc(TALK_INTRO[st])+'”</p></div>';
+  h += '<p class="note">Lova inte att allt stannar mellan er. Mentorn har anmälningsplikt och kan behöva ta hjälp av elevhälsan. Det är ärligare, och tryggare för eleven, att säga det från början.</p>';
+  h += '<div class="grid grid-2" style="margin-top:8px">'+TALK[st].map(function(sec){
+    return '<div class="card"><h3 style="margin-bottom:8px">'+esc(sec[0])+'</h3><ul class="clean">'+sec[1].map(function(q){ return '<li>'+esc(q)+'</li>'; }).join('')+'</ul></div>';
+  }).join('')+'</div>';
+  h += '<h3 class="section-title">Tänk på</h3><div class="card"><ul class="clean">'+TALK_TIPS.map(function(t){ return '<li>'+esc(t)+'</li>'; }).join('')+'</ul></div>';
+  h += '<p style="margin-top:20px" class="no-print"><button type="button" class="btn" data-print-sheet="samtal">Skriv ut samtalsstödet</button></p>';
+  $('v-samtalet').innerHTML = h;
+}
+
+/* ---------- Utskriftsark ---------- */
+function lines(n){ var s=''; for(var i=0;i<n;i++) s+='<div class="line"></div>'; return s; }
+function head(title, sub){ return '<h1>'+esc(title)+'</h1>'+(sub?'<p class="sub">'+esc(sub)+'</p>':''); }
+function grid(items, cols){
+  var rows='', i=0;
+  while(i<items.length){ rows+='<tr>'; for(var c=0;c<cols;c++){ rows+='<td>'+(items[i]!==undefined?esc(items[i]):'')+'</td>'; i++; } rows+='</tr>'; }
+  return '<table>'+rows+'</table>';
+}
+function buildSheet(id, st){
+  var big = st==='lag';
+  switch(id){
+  case 'veckoplan':
+    var fm = frameMin(st);
+    return '<div class="sheet">'+head('Startveckan – min plan', STAGES[st].namn+' ('+STAGES[st].ak+')')+DAYS.map(function(d){
+      var p=planFor(st,d), e0=ex(p[0]), e1=ex(p[1]);
+      return '<div class="day"><h2>'+d.dag+': '+esc(d.tema)+'</h2><ul>'+
+        '<li><strong>Incheckning ('+fm+' min):</strong> ”'+esc(d.inn[st]||d.inn.alla)+'”</li>'+
+        '<li><strong>'+esc(e0.namn)+' ('+e0.tid+' min).</strong> Material: '+esc(e0.material)+'</li>'+
+        '<li><strong>'+esc(e1.namn)+' ('+e1.tid+' min).</strong> Material: '+esc(e1.material)+'</li>'+
+        '<li><strong>Reflektion ('+fm+' min):</strong> ”'+esc(d.ref)+'”</li></ul></div>';
+    }).join('')+'</div>';
+  case 'vanbingo':
+    return '<div class="sheet'+(big?' big':'')+'">'+head('Vän-bingo', big?'Hitta en kompis till varje ruta. Skriv eller rita kompisens namn.':'Hitta en klasskamrat till varje ruta och skriv namnet. En person får bara stå i en ruta.')+
+      '<p>Hitta någon som …</p>'+grid(BINGO[st], big?3:5)+'<p class="sub" style="margin-top:10pt">Mål: tre i rad, eller fyll hela brickan!</p></div>';
+  case 'hitta':
+    return '<div class="sheet">'+head('Hitta någon som …','Fråga runt i klassen. Skriv namnet på den som stämmer in, och ställ en följdfråga: ”Hur då?” eller ”Berätta mer!”')+
+      '<table>'+HITTA.map(function(t){ return '<tr><td style="height:34pt;width:60%">… '+esc(t)+'</td><td style="height:34pt"></td></tr>'; }).join('')+'</table></div>';
+  case 'tvasanningar':
+    var half = '<p><strong>Två sanningar och en lögn</strong></p><p class="q">Två saker om mig som är sanna:</p>'+lines(2)+'<p class="q">En sak som är påhittad:</p>'+lines(1)+'<p class="q">Vilken tror du är påhittad?</p>'+lines(1);
+    return '<div class="sheet">'+half+'<div class="cut"></div>'+half+'</div>';
+  case 'styrkebingo':
+    return '<div class="sheet">'+head('Styrkebingo','Hitta en klasskamrat som passar varje styrka och skriv namnet.')+'<p>Hitta någon som …</p>'+grid(STRENGTH_BINGO,5)+
+      '<p class="q">Vilken styrka blev du gladast över att få?</p>'+lines(2)+'</div>';
+  case 'styrkekort':
+    return '<div class="sheet">'+head('Styrkekort','Klipp ut korten. Varje elev väljer en styrka som passar hen.')+'<div class="cards strengths">'+STRENGTHS[st].map(function(s){ return '<div>'+esc(s)+'</div>'; }).join('')+'</div></div>';
+  case 'empatikort':
+    return '<div class="sheet">'+head('Empatikort','Klipp ut korten. Läs ett kort i taget och prata om: vad tänker du? Vad gör du?')+'<div class="cards">'+EMPATHY[st].map(function(s){ return '<div>'+esc(s)+'</div>'; }).join('')+'</div></div>';
+  case 'kontrakt':
+    if(big) return '<div class="sheet">'+head('Så vill vi ha det i vår klass','Rita eller skriv.')+'<p class="q">Så här gör vi mot varandra</p><div class="box"></div><p class="q">Så här vill vi att det ska kännas i klassrummet</p><div class="box"></div><p class="q">Om någon blir ledsen gör vi så här</p><div class="box"></div></div>';
+    return '<div class="sheet">'+head('Så vill vi ha det i vår klass','Klassens gemensamma överenskommelse.')+
+      '<p class="q">Så här gör vi mot varandra</p>'+lines(3)+'<p class="q">Så här vill vi att det ska kännas i klassrummet</p>'+lines(3)+
+      '<p class="q">Om någon blir ledsen eller utanför gör vi så här</p>'+lines(3)+'<p class="q">Om vi inte följer det vi har kommit överens om gör vi så här</p>'+lines(3)+'</div>';
+  case 'reflektion':
+    if(big) return '<div class="sheet">'+head('Min startvecka','Ringa in hur du mår och rita eller skriv.')+REFLECT.map(function(r){
+      return '<div class="day"><h2>'+r[0]+': '+esc(r[1])+'</h2><p>Så mår jag: <span class="faces">🙂 😐 🙁</span></p><p class="q">'+esc(r[2][0])+'</p><div class="box" style="height:70pt"></div></div>';
+    }).join('')+'</div>';
+    return '<div class="sheet">'+head('Min startvecka','Fyll i lite varje dag. Bladet är ditt.')+REFLECT.map(function(r){
+      return '<div class="day"><h2>'+r[0]+': '+esc(r[1])+'</h2>'+r[2].map(function(q){ return '<p class="q">'+esc(q)+'</p>'+lines(1); }).join('')+'</div>';
+    }).join('')+'</div>';
+  case 'samtal':
+    return '<div class="sheet">'+head('Lära-känna-samtalet','Samtalsstöd för mentorn, '+STAGES[st].kort+'. Välj de frågor som passar.')+
+      '<h2>Så kan du börja</h2><p>”'+esc(TALK_INTRO[st])+'”</p>'+
+      TALK[st].map(function(sec){ return '<h2>'+esc(sec[0])+'</h2><ul>'+sec[1].map(function(q){ return '<li>'+esc(q)+'</li>'; }).join('')+'</ul>'; }).join('')+
+      '<h2>Tänk på</h2><ul>'+TALK_TIPS.map(function(t){ return '<li>'+esc(t)+'</li>'; }).join('')+'</ul></div>';
+  }
+  return '';
+}
+
+function renderPrint(){
+  var st = state.stage, list = SHEETS.filter(function(s){ return s.st.indexOf(st)>-1; });
+  if(!list.some(function(s){ return s.id===ui.sheet; })) ui.sheet = 'veckoplan';
+  var cur = list.filter(function(s){ return s.id===ui.sheet; })[0];
+  var h = '<div class="view-head"><h2 tabindex="-1">Material att <em>skriva ut</em></h2>'+
+    '<p>Allt är anpassat för '+esc(STAGES[st].kort)+'. Eleverna fyller i på papper, och papperen stannar i klassrummet.</p></div>';
+  h += '<div class="sheets">'+list.map(function(s){
+    return '<div class="card sheet-card"><h3>'+esc(s.namn)+'</h3><p class="muted" style="margin:0">'+esc(s.besk)+'</p><div class="actions">'+
+      '<button type="button" class="btn btn-ghost btn-small" data-preview="'+s.id+'" aria-pressed="'+(s.id===ui.sheet)+'">Förhandsvisa</button>'+
+      '<button type="button" class="btn btn-small" data-print-sheet="'+s.id+'">Skriv ut</button></div></div>';
+  }).join('')+'</div>';
+  h += '<div class="preview-box"><h3 class="section-title" id="preview-title" tabindex="-1" style="margin-top:0">Förhandsvisning: '+esc(cur.namn)+'</h3><div class="preview-paper">'+buildSheet(ui.sheet, st)+'</div></div>';
+  $('v-utskrifter').innerHTML = h;
+}
+
+function printSheet(id){
+  $('print-area').innerHTML = buildSheet(id, state.stage);
+  document.body.classList.add('printing-sheet');
+  var done = function(){ document.body.classList.remove('printing-sheet'); window.removeEventListener('afterprint', done); };
+  window.addEventListener('afterprint', done);
+  window.print();
+  setTimeout(done, 1500);
+}
+
+/* ---------- Allmänt ---------- */
+var RENDER = {startveckan:renderStart, ovningar:renderExercises, arshjulet:renderYear, mentorn:renderMentor, samtalet:renderTalk, utskrifter:renderPrint};
+function renderAll(){ Object.keys(RENDER).forEach(function(k){ RENDER[k](); }); renderStage(); renderStore(); }
+function renderStage(){
+  Array.prototype.forEach.call(document.querySelectorAll('.stage-btn'), function(b){ b.setAttribute('aria-pressed', String(b.getAttribute('data-stage')===state.stage)); });
+}
+function renderStore(){
+  var t = canStore
+    ? 'Sparas bara i den här webbläsaren (localStorage): valt stadium, dina val i veckoplanen och dina bockar. Inga namn och inga uppgifter om elever eller personal sparas, och det du väljer och bockar i här skickas aldrig till någon server. Använder du en delad dator kan andra som använder samma webbläsare se dina bockar.'
+    : 'Den här webbläsaren tillåter inte att något sparas. Dina val försvinner när du stänger sidan. Inga uppgifter om elever eller personal skickas någonstans.';
+  $('store-text').textContent = t;
+  $('clear-btn').hidden = !canStore;
+}
+function showView(name, focus){
+  if(!RENDER[name]) name = 'startveckan';
+  ui.view = name;
+  Object.keys(RENDER).forEach(function(k){
+    var el = $('v-'+k), on = k===name;
+    el.hidden = !on;
+    if(on){ el.classList.remove('entering'); void el.offsetWidth; el.classList.add('entering'); }
+  });
+  Array.prototype.forEach.call(document.querySelectorAll('.tab'), function(t){
+    if(t.getAttribute('data-view')===name) t.setAttribute('aria-current','page'); else t.removeAttribute('aria-current');
+  });
+  if(location.hash !== '#'+name){ try{ history.replaceState(null,'','#'+name); }catch(e){} }
+  if(focus){ var h=document.querySelector('#v-'+name+' h2'); if(h) h.focus({preventScroll:true}); var nav=document.querySelector('.tabs'); window.scrollTo({top: nav.offsetTop, behavior:'auto'}); }
+}
+function gotoExercise(id){
+  ui.filter = 'alla'; renderExercises(); showView('ovningar', false);
+  var d = $('ex-'+id); if(!d) return;
+  d.open = true; d.scrollIntoView({block:'start'}); d.querySelector('summary').focus({preventScroll:true});
+}
+function gotoSheet(id){
+  ui.sheet = id; renderPrint(); showView('utskrifter', false);
+  var t = $('preview-title'); if(t){ t.scrollIntoView({block:'start'}); t.focus({preventScroll:true}); }
+}
+
+document.addEventListener('click', function(ev){
+  var t = ev.target.closest('button, [data-seg]'); if(!t) return;
+  if(t.hasAttribute('data-stage')){ state.stage = t.getAttribute('data-stage'); save(); renderAll(); showView(ui.view,false); return; }
+  if(t.hasAttribute('data-view')){ showView(t.getAttribute('data-view'), true); return; }
+  if(t.hasAttribute('data-goto-view')){ showView(t.getAttribute('data-goto-view'), true); return; }
+  if(t.hasAttribute('data-filter')){ ui.filter = t.getAttribute('data-filter'); renderExercises(); var f=document.querySelector('[data-filter="'+ui.filter+'"]'); if(f) f.focus(); return; }
+  if(t.hasAttribute('data-goto-ex')){ gotoExercise(t.getAttribute('data-goto-ex')); return; }
+  if(t.hasAttribute('data-goto-sheet')){ gotoSheet(t.getAttribute('data-goto-sheet')); return; }
+  if(t.hasAttribute('data-preview')){ gotoSheet(t.getAttribute('data-preview')); return; }
+  if(t.hasAttribute('data-print-sheet')){ printSheet(t.getAttribute('data-print-sheet')); return; }
+  if(t.hasAttribute('data-seg')){ var m=$('manad-'+t.getAttribute('data-seg')); if(m){ m.scrollIntoView({block:'start'}); m.focus({preventScroll:true}); } return; }
+});
+document.addEventListener('keydown', function(ev){
+  var t = ev.target;
+  if(t && t.hasAttribute && t.hasAttribute('data-seg') && (ev.key==='Enter' || ev.key===' ')){ ev.preventDefault(); t.dispatchEvent(new MouseEvent('click',{bubbles:true})); }
+});
+document.addEventListener('change', function(ev){
+  var t = ev.target, st = state.stage;
+  if(t.hasAttribute('data-slot')){
+    var day = t.getAttribute('data-day'), slot = +t.getAttribute('data-slot');
+    var d = DAYS.filter(function(x){ return x.key===day; })[0];
+    var p = planFor(st,d).slice(); p[slot] = t.value;
+    bucket(state.plan,st)[day] = p; save();
+    var id = t.id; renderStart(); if(ui.sheet==='veckoplan') renderPrint();
+    var again = $(id); if(again) again.focus();
+    return;
+  }
+  if(t.hasAttribute('data-done')){ bucket(state.done,st)[t.getAttribute('data-done')] = t.checked; save(); return; }
+  if(t.hasAttribute('data-before')){ bucket(state.before,st)[t.getAttribute('data-before')] = t.checked; save(); return; }
+  if(t.hasAttribute('data-wheel')){
+    var i = t.getAttribute('data-wheel'); bucket(state.wheel,st)[i] = t.checked; save();
+    var ww = document.querySelector('.wheel-wrap svg'); if(ww) ww.outerHTML = wheelSVG(st);
+    return;
+  }
+});
+$('clear-btn').addEventListener('click', function(){
+  if(!window.confirm('Vill du rensa allt som har sparats i den här webbläsaren? Dina val och bockar försvinner.')) return;
+  try{ localStorage.removeItem(STORE_KEY); }catch(e){}
+  state = freshState(); renderAll(); showView(ui.view,false);
+});
+window.addEventListener('hashchange', function(){ var n=location.hash.slice(1); if(RENDER[n] && n!==ui.view) showView(n,true); });
+
+renderAll();
+showView(location.hash.slice(1) || 'startveckan', false);
+})();
+</script>
+</body>
+</html>
