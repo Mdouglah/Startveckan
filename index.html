@@ -224,6 +224,9 @@ summary:hover{color:var(--ink);}
 #print-area{display:none;}
 
 footer{border-top:1px solid var(--line);padding:30px 0 48px;}
+/* Länken "Stöd Norvay" i sidfoten: samma färg som sidfotens länkar, synlig fokusram, aldrig på papper */
+.norvay-stod:focus-visible{outline:3px solid currentColor;outline-offset:3px;border-radius:4px}
+@media print{.norvay-stod{display:none!important}}
 .store{display:flex;gap:14px;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;}
 .store p{max-width:70ch;}
 
@@ -308,7 +311,7 @@ footer{border-top:1px solid var(--line);padding:30px 0 48px;}
       <button type="button" class="btn btn-ghost btn-small" id="clear-btn">Rensa det sparade</button>
     </div>
     <p class="small muted">Innehållet är ett stöd för mentorer och ersätter inte skolans egna rutiner för elevhälsa, anmälningsplikt och dokumentation.</p>
-    <p class="small muted">Ett verktyg från <a href="https://norvayapp.se">Norvay</a> · <a href="https://norvayapp.se/integritet">Integritet</a> · <a href="mailto:kontakt@norvayapp.se">kontakt@norvayapp.se</a></p>
+    <p class="small muted">Ett verktyg från <a href="https://norvayapp.se">Norvay</a> · <a href="https://norvayapp.se/integritet">Integritet</a> · <a href="mailto:kontakt@norvayapp.se">kontakt@norvayapp.se</a> · <a class="norvay-stod" href="https://norvayapp.se/#stod" target="_blank" rel="noopener" aria-label="Stöd Norvay (öppnas i ny flik)">Stöd Norvay</a></p>
   </div>
 </footer>
 
