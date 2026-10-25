@@ -224,9 +224,18 @@ summary:hover{color:var(--ink);}
 #print-area{display:none;}
 
 footer{border-top:1px solid var(--line);padding:30px 0 48px;}
-/* Länken "Stöd Norvay" i sidfoten: samma färg som sidfotens länkar, synlig fokusram, aldrig på papper */
-.norvay-stod:focus-visible{outline:3px solid currentColor;outline-offset:3px;border-radius:4px}
-@media print{.norvay-stod{display:none!important}}
+/* Knappen "Stöd Norvay" i Norvay-listen: samma som på startsidan, direkt till vänster om månknappen. På mobil bara hjärtat (skärmläsare läser fortfarande "Stöd Norvay"). */
+.norvay-bar a.norvay-bar-stod{position:relative;display:inline-flex;align-items:center;min-height:0;gap:6px;padding:8px 16px;border-radius:999px;background:#123f37;color:#f5f3ec;font-weight:700;white-space:nowrap;transition:background-color .2s ease}
+.norvay-bar a.norvay-bar-stod::after{content:"";position:absolute;inset:-6px 0}
+.norvay-bar a.norvay-bar-stod:hover{background:#0f362f;color:#f5f3ec;text-decoration:none}
+.norvay-bar a.norvay-bar-stod:focus-visible{outline:3px solid #2f6b5a;outline-offset:3px;border-radius:999px}
+.norvay-bar-stod svg{width:15px;height:15px;flex:0 0 15px}
+:root[data-theme="dark"] .norvay-bar a.norvay-bar-stod{background:#8fc2a8;color:#0f2a24}
+:root[data-theme="dark"] .norvay-bar a.norvay-bar-stod:hover{background:#7aa58f;color:#0f2a24}
+:root[data-theme="dark"] .norvay-bar a.norvay-bar-stod:focus-visible{outline-color:#8fc2a8}
+@media (max-width:480px){.norvay-bar a.norvay-bar-stod{padding:9px}.norvay-bar-stod span{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}}
+@media (prefers-reduced-motion:reduce){.norvay-bar a.norvay-bar-stod{transition:none}}
+@media print{.norvay-bar-stod{display:none!important}}
 .store{display:flex;gap:14px;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;}
 .store p{max-width:70ch;}
 
@@ -256,7 +265,7 @@ footer{border-top:1px solid var(--line);padding:30px 0 48px;}
 <script defer src="https://cloud.umami.is/script.js" data-website-id="2e81b730-fb1d-4183-9323-de51c8949318" data-tag="startveckan" data-do-not-track="true"></script>
 </head>
 <body>
-<div class="norvay-bar"><a class="norvay-bar-back" href="https://norvayapp.se/#verktyg">← Alla verktyg</a><span class="norvay-bar-right"><a class="norvay-bar-brand" href="https://norvayapp.se/" aria-label="Norvay startsida"><span class="norvay-bar-mark">N</span><span>NORVAY</span></a><button class="n-theme" id="themeBtn" type="button"></button></span></div>
+<div class="norvay-bar"><a class="norvay-bar-back" href="https://norvayapp.se/#verktyg">← Alla verktyg</a><span class="norvay-bar-right"><a class="norvay-bar-brand" href="https://norvayapp.se/" aria-label="Norvay startsida"><span class="norvay-bar-mark">N</span><span>NORVAY</span></a><a class="norvay-bar-stod" href="https://norvayapp.se/#stod" target="_blank" rel="noopener" aria-label="Stöd Norvay (öppnas i ny flik)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg><span>Stöd Norvay</span></a><button class="n-theme" id="themeBtn" type="button"></button></span></div>
 
 <header class="hero">
   <div class="wrap">
@@ -311,7 +320,7 @@ footer{border-top:1px solid var(--line);padding:30px 0 48px;}
       <button type="button" class="btn btn-ghost btn-small" id="clear-btn">Rensa det sparade</button>
     </div>
     <p class="small muted">Innehållet är ett stöd för mentorer och ersätter inte skolans egna rutiner för elevhälsa, anmälningsplikt och dokumentation.</p>
-    <p class="small muted">Ett verktyg från <a href="https://norvayapp.se">Norvay</a> · <a href="https://norvayapp.se/integritet">Integritet</a> · <a href="mailto:kontakt@norvayapp.se">kontakt@norvayapp.se</a> · <a class="norvay-stod" href="https://norvayapp.se/#stod" target="_blank" rel="noopener" aria-label="Stöd Norvay (öppnas i ny flik)">Stöd Norvay</a></p>
+    <p class="small muted">Ett verktyg från <a href="https://norvayapp.se">Norvay</a> · <a href="https://norvayapp.se/integritet">Integritet</a> · <a href="mailto:kontakt@norvayapp.se">kontakt@norvayapp.se</a></p>
   </div>
 </footer>
 
